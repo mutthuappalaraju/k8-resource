@@ -3,8 +3,8 @@ kind: lables
 metadata:
    name: label-demo
    labels:
-     course: devops
-     age: 30
+      course: Devops 
+      Trainer: "appalaraju"
 spec:
   containers:
   - name: nginx
