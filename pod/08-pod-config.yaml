@@ -16,7 +16,7 @@ spec:
         configMapKeyRef:
           name: configmap-demo
           key: course
-    - name: trainer
+    - name: duration
       valueFrom:
         configMapKeyRef:
           name: configmap-demo
