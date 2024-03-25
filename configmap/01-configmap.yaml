@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata: 
-  name: Config
+  name: config
 data: 
   cource: devops
   duration: 30hrs
