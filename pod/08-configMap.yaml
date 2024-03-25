@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata: 
-  name: config-demo
-data: 
-  cource: devops
-  duration: 30hrs
