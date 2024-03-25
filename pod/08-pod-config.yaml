@@ -10,13 +10,13 @@ spec:
     - name: appalaraju
       valueFrom:
          configMapKeyRef:
-           name: course-config
+           name: course-demo
            key: course
 
     - name: duration
       valueFrom:
          configMapKeyRef:
-           name: course-config
+           name: course-demo
            key: duration
     
            
