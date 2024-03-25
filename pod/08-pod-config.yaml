@@ -8,21 +8,23 @@ spec:
     image: nginx
     env:
     - name: appalaraju
-      value: devops
-    valueFrom:
-      configMapKeyRef:
-      - name: course-config
-        key: course
-      - name: joindevops
-        value: 150hrs
-      - name: mirtipati
-        value: hello devops
-      - name: training
-        value: newly joindevops
+      valueFrom:
+         configMapKeyRef:
+           name: course-config
+           key: course
+
+    - name: duration
+      valueFrom:
+         configMapKeyRef:
+           name: course-config
+           key: duration
     
+           
+
+           
       
 
-
-
+     
     
+
     
