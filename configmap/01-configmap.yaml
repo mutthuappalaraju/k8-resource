@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: config-demo
+  name: configmap-demo
 data:
-  course: docker
+  course: Devops
   duration: 30hr

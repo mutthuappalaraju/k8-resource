@@ -3,21 +3,24 @@ kind: Pod
 metadata:
   name: config-pod
 spec:
+  
   containers:
-  - name: nginx
+  - name: config-pod
     image: nginx
+    
+    ports:
+    - containerPort: 80
     env:
-    - name: appalaraju
+    - name: course
       valueFrom:
-         configMapKeyRef:
-           name: course-demo
-           key: course
-
-    - name: duration
+        configMapKeyRef:
+          name: devops-config
+          key: course
+    - name: trainer
       valueFrom:
-         configMapKeyRef:
-           name: course-demo
-           key: duration
+        configMapKeyRef:
+          name: devops-config
+          key: trainer
     
            
 
