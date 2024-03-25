@@ -14,13 +14,13 @@ spec:
     - name: course
       valueFrom:
         configMapKeyRef:
-          name: devops-config
+          name: configmap-demo
           key: course
     - name: trainer
       valueFrom:
         configMapKeyRef:
-          name: devops-config
-          key: trainer
+          name: configmap-demo
+          key: duration
     
            
 
