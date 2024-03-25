@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: config-pod
+  name: config-demo
 spec:
   
   containers:
-  - name: config-pod
+  - name: nginx
     image: nginx
     
     ports:
