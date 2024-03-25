@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    iamge: nginx
+    image: nginx
     env:
     - name: appalaraju
       value: devops
