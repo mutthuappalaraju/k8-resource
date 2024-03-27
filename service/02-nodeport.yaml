@@ -6,7 +6,7 @@ metadata:
   labels:
     server: nginx
 spec:
-  containerPort:
+  containers:
   - name: nginx
     image: nginx
     ports:
