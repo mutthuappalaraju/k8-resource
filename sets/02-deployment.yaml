@@ -2,12 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  annotations:
-    deployment.kubernetes.io/change-cause: "Upgraded to version 2.0"
   labels:
     app: nginx
+  
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
@@ -23,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.22.1
+        image: nginx
         ports:
         - containerPort: 80
 
