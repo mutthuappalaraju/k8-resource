@@ -4,7 +4,7 @@ metadata:
   name: ebs-static
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteOnce #EBS volume should have readwriteonce, because it HD.
   capacity:
     storage: 10Gi
   csi:
@@ -17,7 +17,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: ebs-static
 spec:
-  storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set
+  storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set. for static provisioning this is empty
   volumeName: ebs-static
   accessModes:
     - ReadWriteOnce
@@ -39,11 +39,11 @@ spec:
     - name: nginx-data
       mountPath: /usr/share/nginx/html
   nodeSelector:
-    zone: 1b
+    zone: 1f
   volumes:
   - name: nginx-data
     persistentVolumeClaim:
-      claimName: ebs-static 
+      claimName: ebs-static
 ---
 apiVersion: v1
 kind: Service
@@ -55,5 +55,5 @@ spec:
     demo: ebs-static
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80  
+    port: 80 #service-port
+    targetPort: 80 #container-port
