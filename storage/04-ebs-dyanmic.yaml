@@ -34,11 +34,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ebs-dyanamic
+  name: ebs-dynamic
 spec:
   type: LoadBalancer
   selector:
-    demo: ebs-dyanamic
+    demo: ebs-dynamic
   ports:
   - protocol: TCP
     port: 80 #service-port
