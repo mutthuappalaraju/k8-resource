@@ -4,7 +4,7 @@ metadata:
   name: ebs-static
 spec:
   accessModes:
-  - ReadWriteOnce #EBS volume should have readwriteonce, because it HD.
+  - ReadWriteOnce 
   capacity:
     storage: 10Gi
   csi:
@@ -17,7 +17,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: ebs-static
 spec:
-  storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set. for static provisioning this is empty
+  storageClassName: ""
   volumeName: ebs-static
   accessModes:
     - ReadWriteOnce
