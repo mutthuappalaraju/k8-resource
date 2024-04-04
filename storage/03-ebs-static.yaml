@@ -55,5 +55,5 @@ spec:
     demo: ebs-static
   ports:
   - protocol: TCP
-    port: 80 #service-port
+    port: 80 
     targetPort: 80 #container-port
